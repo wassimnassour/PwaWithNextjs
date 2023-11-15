@@ -3,7 +3,7 @@
 ## Manifest config details
 
 - display: this can be standalone or minimal ui or full screen
-  ![Difference between standalone or minimal ui or full screen](/assets/img/MarineGEO_logo.png "Difference between standalone or minimal ui or full screen")
+  ![Difference between standalone or minimal ui or full screen](/pwa-phone-size.png "Difference between standalone or minimal ui or full screen")
 
 - start_url :
 - scope:
