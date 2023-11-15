@@ -5,8 +5,10 @@
 - display: this can be standalone or minimal ui or full screen
   ![Difference between standalone or minimal ui or full screen](/public/pwa-phone-size.png "Difference between standalone or minimal ui or full screen")
 
-- start_url :
-- scope:
+- start_url :The "start_url" property specifies the URL that should be loaded when the user launches the web application. It is also used as the default URL when the app is added to the home screen. The value is a string representing the URL. For example:
+
+- scope: The "scope" property defines the navigation scope of the web application. It determines which pages are within the app's scope and can be navigated to without leaving the app experience . like if you want to access singing with google it will open new tab like browser in your app
+
 - icons : so about icons you should know the supported sizes and types
   - recommendation Sizes :
   - at least : 192X192
