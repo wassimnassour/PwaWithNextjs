@@ -1,37 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# How To Config PWA in your next app
 
-## Getting Started
+## Manifest config details
 
-First, run the development server:
+- display: this can be standalone or minimal ui or full screen
+  ![Difference between standalone or minimal ui or full screen](/assets/img/MarineGEO_logo.png "Difference between standalone or minimal ui or full screen")
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- start_url :
+- scope:
+- icons : so about icons you should know the supported sizes and types
+  - recommendation Sizes :
+  - at least : 192X192
+  - 384x384 ,1024x1024
+  - 🔴 the icons is not working on ios you should add new meta tag to support ios
+    <link rel="apple-touch-icon" sizes="190x190" href="/path/to/your/icon.png">
+- shortcuts: allow users to go directly into a specific action or page by long-pressing the app logo.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## things you should be aware of
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- when you build PWA,the user can start selecting things like the text in button or titles , so you want to give the best experience , you can add user-select:none and -webkit-user-select:none to your tag or class to make sure that user can't select this text
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- when you use standalone if there’s any button or anything in the safe area , you can’t access cuz the the phone is using it we can use media with display mode
 
-## Learn More
+  ```css
+  @media (display-mode: standalone) {
+    padding-bottom: 32px;
+  }
+  ```
 
-To learn more about Next.js, take a look at the following resources:
+  you can also use [env](https://developer.mozilla.org/en-US/docs/Web/CSS/env) from css to fill the screen when you are working with rotation screen
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# PwaWithNextjs
+- To make sure your Icon will fit and look exactly as you want without any white background or anything , check this
+  [https://web.dev/articles/maskable-icon](https://web.dev/articles/maskable-icon)
