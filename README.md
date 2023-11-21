@@ -33,3 +33,9 @@
 
 - To make sure your Icon will fit and look exactly as you want without any white background or anything , check this
   [https://web.dev/articles/maskable-icon](https://web.dev/articles/maskable-icon)
+
+## offline Support
+
+- you can add fallback offline page visit this [https://github.com/shadowwalker/next-pwa/tree/master/examples/offline-fallback-v2](https://github.com/shadowwalker/next-pwa/tree/master/examples/offline-fallback-v2)
+
+- also you can register service worker and start cashing the resourses , visit this [https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
