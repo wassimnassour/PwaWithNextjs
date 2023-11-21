@@ -1,12 +1,12 @@
 {
+  "name": "Next App",
+  "short_name": "PWA Next",
+  "description": "Testing nextjs app with PWA",
   "theme_color": "#f44435",
   "background_color": "#f44435",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "name": "Next App",
-  "short_name": "PWA Next",
-  "description": "Testing nextjs app with PWA",
   "orientation": "portrait",
   "icons": [
     {
@@ -27,11 +27,25 @@
       "url": "/blog",
       "icons": [
         {
-          "src": "/vercel.svg",
+          "src": "/icon.png",
           "sizes": "192x192",
           "type": "image/png"
         }
       ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/icon.png",
+      "type": "image/png",
+      "sizes": "540x720",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/icon.jpg",
+      "type": "image/png",
+      "sizes": "720x540",
+      "form_factor": "wide"
     }
   ]
 }
